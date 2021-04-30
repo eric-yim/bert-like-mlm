@@ -1,2 +1,2 @@
-# Bert-like MLM Training Procedure
+# BERT-like MLM Training Procedure
 

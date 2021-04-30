@@ -1,0 +1,29 @@
+data:
+  path: data/data.txt
+  dataset:
+    n_embed: 10
+train:
+  sampler:
+    replacement: False
+  dataloader:
+    batch_size: 32
+  optimizer:
+    lr: 1e-4
+    weight_decay: 0
+  scheduler:
+    step_size: 50.0
+    gamma: 0.99
+  start_epoch: 0
+  epochs: 1000
+model:
+  save: saved_model/last.pth
+  kwargs:
+    pe_max_len: 10
+    vocab_size: 11
+    main_params:
+      d_model: 128
+      nhead: 16
+      num_encoder_layers: 6
+      dim_feedforward: 128
+      dropout: 0.1
+    

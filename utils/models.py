@@ -30,9 +30,9 @@ class TransformerModel(nn.Module):
         self.transformer = nn.Transformer(**main_params)
         d_model = main_params['d_model']
         dropout = main_params['dropout']
-        self.pos_encoder = PositionalEncoding(d_model, dropout)
+        self.pos_encoder = PositionalEncoding(d_model, dropout,pe_max_len)
         
-        self.embedding = nn.Embedding(vocab_size,d_model,pe_max_len)
+        self.embedding = nn.Embedding(vocab_size,d_model)
         
         self.d_model = d_model
 
